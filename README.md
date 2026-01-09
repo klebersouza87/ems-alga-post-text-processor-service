@@ -1,2 +1,2 @@
-# ems-alga-text-processor-service
+# ems-alga-post-text-processor-service
 Project to calculate words in a post
