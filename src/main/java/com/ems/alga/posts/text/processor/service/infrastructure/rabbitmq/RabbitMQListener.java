@@ -31,7 +31,7 @@ public class RabbitMQListener {
             throw new RuntimeException("Simulated error during post creation for testing Dead Letter Queue purposes.");
         }
 
-        int wordCount = postInput.getPostBody().split(" ").length;
+        int wordCount = postInput.getPostBody().split("\\s+").length;
         double calculatedValue = BigDecimal.valueOf(wordCount * 0.10).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
 
         PostOutput postOutput = PostOutput.builder()
